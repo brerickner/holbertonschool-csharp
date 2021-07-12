@@ -1,0 +1,16 @@
+/home/vagrant/holbertonschool-csharp/0x00-csharp-hello_world/3-writeline/bin/Debug/net5.0/3-writeline
+/home/vagrant/holbertonschool-csharp/0x00-csharp-hello_world/3-writeline/bin/Debug/net5.0/3-writeline.deps.json
+/home/vagrant/holbertonschool-csharp/0x00-csharp-hello_world/3-writeline/bin/Debug/net5.0/3-writeline.runtimeconfig.json
+/home/vagrant/holbertonschool-csharp/0x00-csharp-hello_world/3-writeline/bin/Debug/net5.0/3-writeline.runtimeconfig.dev.json
+/home/vagrant/holbertonschool-csharp/0x00-csharp-hello_world/3-writeline/bin/Debug/net5.0/3-writeline.dll
+/home/vagrant/holbertonschool-csharp/0x00-csharp-hello_world/3-writeline/bin/Debug/net5.0/ref/3-writeline.dll
+/home/vagrant/holbertonschool-csharp/0x00-csharp-hello_world/3-writeline/bin/Debug/net5.0/3-writeline.pdb
+/home/vagrant/holbertonschool-csharp/0x00-csharp-hello_world/3-writeline/obj/Debug/net5.0/3-writeline.csproj.AssemblyReference.cache
+/home/vagrant/holbertonschool-csharp/0x00-csharp-hello_world/3-writeline/obj/Debug/net5.0/3-writeline.GeneratedMSBuildEditorConfig.editorconfig
+/home/vagrant/holbertonschool-csharp/0x00-csharp-hello_world/3-writeline/obj/Debug/net5.0/3-writeline.AssemblyInfoInputs.cache
+/home/vagrant/holbertonschool-csharp/0x00-csharp-hello_world/3-writeline/obj/Debug/net5.0/3-writeline.AssemblyInfo.cs
+/home/vagrant/holbertonschool-csharp/0x00-csharp-hello_world/3-writeline/obj/Debug/net5.0/3-writeline.csproj.CoreCompileInputs.cache
+/home/vagrant/holbertonschool-csharp/0x00-csharp-hello_world/3-writeline/obj/Debug/net5.0/3-writeline.dll
+/home/vagrant/holbertonschool-csharp/0x00-csharp-hello_world/3-writeline/obj/Debug/net5.0/ref/3-writeline.dll
+/home/vagrant/holbertonschool-csharp/0x00-csharp-hello_world/3-writeline/obj/Debug/net5.0/3-writeline.pdb
+/home/vagrant/holbertonschool-csharp/0x00-csharp-hello_world/3-writeline/obj/Debug/net5.0/3-writeline.genruntimeconfig.cache
