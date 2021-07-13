@@ -6,14 +6,13 @@ namespace _5_print_comb
     {
         static void Main(string[] args)
         {
-            int i, j;
-            for (i = 0; i < 10; i++)
+            int i;
+            for (i = 0; i < 100; i++)
             {
-                for (j = 0; j < 10; j++)
-                if (j == i & j == 9)
-                    Console.Write($"{i}{j}");
+                if (i == 99)
+                    Console.Write($"{i:D2}");
                 else
-                    Console.Write($"{i}{j}, ");
+                    Console.Write($"{i:D2}, ");
             }
         }
     }
