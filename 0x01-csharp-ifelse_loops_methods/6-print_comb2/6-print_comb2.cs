@@ -14,7 +14,7 @@ namespace _6_print_comb2
                     if (j > i)
                     {
                         if (i == 8 & j == 9)
-                            Console.Write($"{i}{j}");
+                            Console.WriteLine($"{i}{j}");
                         else
                             Console.Write($"{i}{j}, ");
                     }
