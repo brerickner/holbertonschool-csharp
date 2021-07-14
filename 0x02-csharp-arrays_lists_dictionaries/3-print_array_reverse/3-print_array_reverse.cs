@@ -9,7 +9,7 @@ class Array
         }
 
         int i = array.Length - 1;
-        for (; i >= 0; i--)
+        for (; i > -1; i--)
         {
             Console.Write(array[i]);
             if (i != 0)
@@ -17,5 +17,6 @@ class Array
                 Console.Write(" ");
             }
         }
+        Console.WriteLine();
     }
 }
