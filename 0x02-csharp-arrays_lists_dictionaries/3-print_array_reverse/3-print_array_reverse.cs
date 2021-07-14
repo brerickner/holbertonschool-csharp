@@ -13,7 +13,7 @@ class Array
         while (i > -1)
         {
             Console.Write(array[i]);
-            if (i > 0)
+            if (i != 0)
             {
                 Console.Write(" ");
             }
