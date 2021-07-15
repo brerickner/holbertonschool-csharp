@@ -4,11 +4,11 @@ class Dictionary
 {
     public static Dictionary<string, int> MultiplyBy2(Dictionary<string, int> myDict)
     {
-        Dictionary<string, int> legitDict = new Dictionary<string, int>();
+        Dictionary<string, int> legitDict = new Dictionary<string, int>(myDict);
         foreach (var val in myDict)
         {
-            legitDict.Add(val.Key, val.Value * 2);
+            legitDict[val.Key] = val.Value * 2;
         }
-        return (myDict);
+        return (legitDict);
     }
 }
