@@ -8,10 +8,10 @@ class Program
         Dictionary<string, int> myDict = new Dictionary<string, int>();
         Dictionary<string, int> newDict = new Dictionary<string, int>();
 
-        myDict.Add("John", 12);
-        myDict.Add("Alex", 8);
         myDict.Add("Bob", 14);
+        myDict.Add("John", 12);
         myDict.Add("Mary", 14);
+        myDict.Add("Alex", 8);
         myDict.Add("Molly", 16);
 
         newDict = Dictionary.MultiplyBy2(myDict);
