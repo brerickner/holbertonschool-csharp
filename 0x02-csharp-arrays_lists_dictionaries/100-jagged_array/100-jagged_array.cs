@@ -13,7 +13,7 @@ class Program
             for (int a = 0; a < jagged_array[b].Length; a++)
             {
                 System.Console.Write("{0}", jagged_array[b][a]);
-                if (a < jagged_array[b].Length)
+                if (a < jagged_array[b].Length - 1)
                     System.Console.Write(" ");
             }
             System.Console.WriteLine();
