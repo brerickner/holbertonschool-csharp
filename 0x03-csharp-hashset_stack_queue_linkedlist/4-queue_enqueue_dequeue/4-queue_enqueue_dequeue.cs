@@ -10,25 +10,25 @@ class MyQueue
 
         if (aQueue == null)
         {
-            System.Console.WriteLine("Stack is empty");
+            System.Console.WriteLine("Queue is empty");
             // aQueue = new Stack<string>;
         }
         System.Console.WriteLine($"Number of items: {aQueue.Count}");
         if (aQueue.Count > 0)
-            System.Console.WriteLine($"Top item: {aQueue.Peek()}");
+            System.Console.WriteLine($"First item: {aQueue.Peek()}");
         else
-            System.Console.WriteLine("Stack is empty");
+            System.Console.WriteLine("Queue is empty");
 
         if (aQueue.Contains(search) == condition)
         {
-            System.Console.WriteLine($"Stack contains \"{search}\": {true}");
+            System.Console.WriteLine($"Queue contains \"{search}\": {true}");
             while (aQueue.Contains(search) == condition && aQueue.Count > 0)
             {
                 aQueue.Dequeue();
             }
         }
         else
-            System.Console.WriteLine($"Stack contains \"{search}\": {false}");
+            System.Console.WriteLine($"Queue contains \"{search}\": {false}");
 
         if(newItem != null)
             aQueue.Enqueue(newItem);
