@@ -8,19 +8,19 @@ class Program
     {
         Stack<string> aStack = new Stack<string>();
 
-        aStack.Push("C");
-        aStack.Push("HTML");
-        aStack.Push("Javascript");
-        aStack.Push("Python");
-        aStack.Push("React");
-        aStack.Push("Ruby");
+        aStack.Push("Physical");
+        aStack.Push("Data Link");
+        aStack.Push("Network");
+        aStack.Push("Transport");
+        aStack.Push("Session");
+        aStack.Push("Presentation");
 
         foreach (string item in aStack)
             Console.WriteLine(item);
 
         Console.WriteLine("------");
 
-        MyStack.Info(aStack, "C#", "Javascript");
+        MyStack.Info(aStack, "Application", "Application");
 
         Console.WriteLine("------");
 
