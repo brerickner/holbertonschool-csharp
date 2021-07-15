@@ -15,15 +15,12 @@ class MyStack
         if (aStack.Count > 0)
             System.Console.WriteLine($"Top item: {aStack.Peek()}");
 
-        if (search != null)
+        if (aStack.Contains(search) == condition)
         {
-            if (aStack.Contains(search) == condition)
+            System.Console.WriteLine($"Stack contains \"{search}\": {true}");
+            while (aStack.Contains(search) == condition && aStack.Count > 0)
             {
-                System.Console.WriteLine($"Stack contains \"{search}\": {true}");
-                while (aStack.Contains(search) == condition && aStack.Count > 0)
-                {
-                    aStack.Pop();
-                }
+                aStack.Pop();
             }
         }
         else
