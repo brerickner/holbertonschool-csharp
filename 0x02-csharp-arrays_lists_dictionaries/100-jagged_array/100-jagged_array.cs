@@ -8,14 +8,15 @@ class Program
         jagged_array[0] = new int[]{0, 1, 2, 3};
         jagged_array[1] = new int[]{0, 1, 2, 3, 4, 5, 6};
         jagged_array[2] = new int[]{0, 1};
-        for (int i = 0; i < jagged_array.Length; i++)
+        for (int b = 0; b < jagged_array.Length; b++)
         {
-            for (int j = 0; j <= jagged_array[i].Length; j++)
+            for (int a = 0; a <= jagged_array[b].Length - 1; a++)
             {
-                if (i < jagged_array[j].Length - 1)
-                    System.Console.WriteLine(jagged_array[i][j]);
+                System.Console.Write("{0}", jagged_array[b][a]);
+                if (a < jagged_array[b].Length)
+                    System.Console.Write(" ");
             }
-        System.Console.WriteLine();
+            System.Console.WriteLine();
         }
     }
 }
