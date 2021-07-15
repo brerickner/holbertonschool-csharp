@@ -10,7 +10,7 @@ class Dictionary
         myList.Sort();
         foreach (string keyz in myList)
         {
-            System.Console.WriteLine("{0} : {1}", keyz, myDict[keyz]);
+            System.Console.WriteLine($"{keyz} : {myDict[keyz]}");
         }
     }
 }
