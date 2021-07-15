@@ -6,7 +6,7 @@ class MyStack
     {
         Boolean condition = true;
 
-        if (aStack == null || aStack.Count <= 0)
+        if (aStack.Count == 0)
         {
             System.Console.WriteLine("Stack is empty");
             // aStack = new Stack<string>;
