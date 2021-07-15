@@ -6,14 +6,14 @@ class Dictionary
     {
         string freshKey = "None";
         int highScore = 0;
-        if (myList.Count == 0)
+        if (myList.Count == 0 || myList == null)
             return ("None");
         foreach (KeyValuePair<string, int> newScore in myList)
         {
-            if (newScore.Value > highScore)
+            if (newScore.Value >= highScore)
             {
-                highScore = newScore.Value;
                 freshKey = newScore.Key;
+                highScore = newScore.Value;
             }
         }
         return (freshKey);

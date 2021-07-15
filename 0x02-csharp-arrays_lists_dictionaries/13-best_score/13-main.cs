@@ -7,11 +7,7 @@ class Program
     {
         Dictionary<string, int> myDict = new Dictionary<string, int>();
 
-        myDict.Add("John", 12);
-        myDict.Add("Alex", 8);
-        myDict.Add("Bob", 14);
-        myDict.Add("Molly", 16);
-        myDict.Add("Mary", 14);
+        myDict.Add("Alex", 0);
 
         Console.WriteLine("Best Score: {0}", Dictionary.BestScore(myDict));
     }
