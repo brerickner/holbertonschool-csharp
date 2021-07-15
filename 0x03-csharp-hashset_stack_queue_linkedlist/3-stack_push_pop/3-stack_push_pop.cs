@@ -6,7 +6,7 @@ class MyStack
     {
         Boolean condition = true;
 
-        if (aStack.Count == 0)
+        if (aStack == null)
         {
             System.Console.WriteLine("Stack is empty");
             // aStack = new Stack<string>;
@@ -14,6 +14,8 @@ class MyStack
         System.Console.WriteLine($"Number of items: {aStack.Count}");
         if (aStack.Count > 0)
             System.Console.WriteLine($"Top item: {aStack.Peek()}");
+        else
+            System.Console.WriteLine("Stack is empty");
 
         if (aStack.Contains(search) == condition)
         {
