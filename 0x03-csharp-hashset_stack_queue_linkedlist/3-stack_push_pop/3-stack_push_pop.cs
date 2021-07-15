@@ -14,14 +14,14 @@ class MyStack
 
         if (aStack.Contains(search) == condition)
         {
-            System.Console.WriteLine($"Stack contains {search}: {true}");
+            System.Console.WriteLine($"Stack contains \"{search}\": {true}");
             while (aStack.Contains(search) == condition && aStack.Count > 0)
             {
                 aStack.Pop();
             }
         }
         else
-            System.Console.WriteLine($"Stack contains {search}: {false}");
+            System.Console.WriteLine($"Stack contains \"{search}\": {false}");
         aStack.Push(newItem);
         return (aStack);
     }
