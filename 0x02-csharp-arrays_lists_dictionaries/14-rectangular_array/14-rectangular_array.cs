@@ -16,7 +16,7 @@ namespace _14_rectangular_array
             {
                 for (int y = 0; y < height; y++)
                 {
-                    System.Console.Write(arrayz[x,y]);
+                    System.Console.Write($"{arrayz[x,y]} ");
                 }
                 System.Console.WriteLine();
             }
