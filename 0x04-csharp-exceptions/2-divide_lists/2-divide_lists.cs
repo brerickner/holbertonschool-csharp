@@ -1,12 +1,30 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 
-namespace _2_divide_lists
+
+class List
 {
-    class Program
+    public static List<int> Divide(List<int> list1, List<int> list2, int listLength)
     {
-        static void Main(string[] args)
+        List<int> results = new List<int>();
+        int index = 0;
+        for (; index < listLength; index++)
         {
-            Console.WriteLine("Hello World!");
+            try
+            {
+                results.Add(list1[index] / list2[index]);
+            }
+            catch (DivideByZeroException)
+            {
+                System.Console.WriteLine("Cannot divide by zero");
+                results.Add(0);
+            }
+            catch (ArgumentOutOfRangeException)
+            {
+                System.Console.WriteLine("Out of range");
+            }
         }
+    return (results);
     }
 }
