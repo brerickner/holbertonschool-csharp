@@ -9,7 +9,7 @@ class List
 
         try
         {
-            for (;index <= n; index++)
+            for (;index < n; index++)
             {
                 System.Console.WriteLine(myList[index]);
             }
