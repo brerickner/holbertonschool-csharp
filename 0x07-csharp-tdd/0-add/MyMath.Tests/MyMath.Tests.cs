@@ -1,18 +1,16 @@
 using NUnit.Framework;
 
-namespace Tests
+namespace MyMath.Tests
 {
+    [TestFixture]
     public class Tests
     {
-        [SetUp]
-        public void Setup()
-        {
-        }
-
         [Test]
-        public void Test1()
+        public void CalculateALotOfSums([Range(-20,100)] int x, [Range(-20,100)] int y)
         {
-            Assert.Pass();
+            int testSum = Operations.Add(x, y);
+            int realSum = (x + y);
+            Assert.AreEqual(testSum, realSum);
         }
     }
 }
