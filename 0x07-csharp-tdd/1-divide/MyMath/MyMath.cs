@@ -15,6 +15,9 @@ namespace MyMath
         /// <returns>New matrix of divided elements</returns>
         public static int[,] Divide(int[,] matrix, int num)
         {
+            if (matrix == null)
+                return (null);
+                
             int rowLength = matrix.GetLength(0);
             int colLength = matrix.GetLength(1);
             int[,] newMatrix = new int[rowLength, colLength];
