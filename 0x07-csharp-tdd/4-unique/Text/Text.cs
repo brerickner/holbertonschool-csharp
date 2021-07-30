@@ -2,8 +2,16 @@
 
 namespace Text
 {
+    /// <summary>
+    /// Str class
+    /// </summary>
     public class Str
     {
+        /// <summary>
+        /// Gets index of the first non-repeating character of a string
+        /// </summary>
+        /// <param name="s">The string</param>
+        /// <returns>returns the index of the first non-repeating character of a string</returns>
         public static int UniqueChar(string s)
         {
             Dictionary<char,int>dict = new Dictionary<char,int>();
