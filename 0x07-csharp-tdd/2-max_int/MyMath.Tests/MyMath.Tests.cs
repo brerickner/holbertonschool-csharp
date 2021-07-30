@@ -14,7 +14,7 @@ namespace MyMath.Tests
 
 
 
-            Assert.AreEqual(1, Operations.Max(myNums));
+            Assert.AreEqual(1, MyMath.Operations.Max(myNums));
             // Assert.AreEqual(1, Operations.Max(myNums));
         }
     }
