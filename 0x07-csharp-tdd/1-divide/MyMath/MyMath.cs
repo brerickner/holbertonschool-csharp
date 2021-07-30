@@ -27,8 +27,9 @@ namespace MyMath
                     {
                         newMatrix[i,j] = matrix[i, j]/num;
                     }
-                    catch 
+                    catch (System.DivideByZeroException)
                     {
+                        System.Console.WriteLine("Num cannot be 0");
                         return (null);
                     }
                 }
