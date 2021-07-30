@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Text
 {
@@ -30,9 +31,10 @@ namespace Text
             {
                 if (dict[s[i]]==1)
                 {
-                    return i;
+                    return (i);
                 }
             }
-            return -1;        
+        return (-1);
+        }        
     }
 }

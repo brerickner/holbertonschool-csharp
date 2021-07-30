@@ -4,15 +4,11 @@ namespace Text.Tests
 {
     public class Tests
     {
-        [SetUp]
-        public void Setup()
-        {
-        }
-
         [Test]
-        public void Test1()
+        public void testUniqs()
         {
-            Assert.Pass();
+            string stringy = "helloworld";
+            Assert.AreEqual(0, Str.UniqueChar(stringy));
         }
     }
 }
