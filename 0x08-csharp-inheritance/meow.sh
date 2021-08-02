@@ -1,4 +1,4 @@
-# example usage: ./meow.sh 0-meow. Must still remove 
+# example usage: ./meow.sh 0-meow. Must still remove namespace
 if [ $# -eq 1 ];
 then
     prog_name="$1".cs;
