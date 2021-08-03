@@ -13,19 +13,18 @@ using System.Collections.Generic;
         /// <param name="myObj">the object</param>
         public static void Print(object myObj)
         {
-            TypeInfo theType = typeof(myObj).GetTypeInfo().DeclaredProperties;
-            TypeInfo meths = typeof(myObj).GetTypeInfo().DeclaredMethods;
+            TypeInfo theType = typeof(object).GetTypeInfo();
+            // TypeInfo meths = typeof(myObj).GetTypeInfo().DeclaredMethods;
             
-            IEnumerable<PropertyInfo> pList = theList.DeclaredProperties;
-            IEnumerable<MethodInfo> mList = theList.DeclaredMethods;
+            IEnumerable<PropertyInfo> pList = theType.DeclaredProperties;
+            IEnumerable<MethodInfo> mList = theType.DeclaredMethods;
 
-            IEnumerable<theType> p = new List<theType>();
-            IEnumerable<meths> m = new List<meths>();
+            // IEnumerable<theType> p = new List<theType>();
+            // IEnumerable<meths> m = new List<meths>();
             // Get the properties of 'myObj' class object.
             Console.WriteLine($"{myObj.GetType().Name} Properties:");
-            // System.Console.WriteLine(theType);
+            Console.WriteLine($"{myObj.GetType().Name} Methods:");
 
-            // System.Console.WriteLine(meths);
             // foreach ()
             // {
                     // Console.WriteLine(myPropertyInfo[i].Name);
