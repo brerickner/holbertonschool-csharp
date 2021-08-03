@@ -2,9 +2,6 @@
 using System.Reflection;
 using System.Collections.Generic;
 
-
-
-
     class Obj
     {
         /// <summary>
@@ -13,17 +10,25 @@ using System.Collections.Generic;
         /// <param name="myObj">the object</param>
         public static void Print(object myObj)
         {
-            TypeInfo theType = typeof(object).GetTypeInfo();
+            TypeInfo typeList = myObj.GetType().GetTypeInfo();
             // TypeInfo meths = typeof(myObj).GetTypeInfo().DeclaredMethods;
             
-            IEnumerable<PropertyInfo> pList = theType.DeclaredProperties;
-            IEnumerable<MethodInfo> mList = theType.DeclaredMethods;
+            IEnumerable<PropertyInfo> pList = typeList.GetProperties();
+            IEnumerable<MethodInfo> mList = typeList.GetMethods();
 
-            // IEnumerable<theType> p = new List<theType>();
+            // IEnumerable<typeList> p = new List<typeList>();
             // IEnumerable<meths> m = new List<meths>();
-            // Get the properties of 'myObj' class object.
+
             Console.WriteLine($"{myObj.GetType().Name} Properties:");
+            foreach (PropertyInfo p in pList)
+            {
+                System.Console.WriteLine(p.Name);
+            }
             Console.WriteLine($"{myObj.GetType().Name} Methods:");
+            foreach (MethodInfo m in mList)
+            {
+                System.Console.WriteLine(m.Name);
+            }
 
             // foreach ()
             // {
