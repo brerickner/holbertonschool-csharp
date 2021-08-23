@@ -1,0 +1,12 @@
+/home/bre/holbertonschool-csharp/0x09-csharp-linear_algebra/14-matrix_addition/obj/Debug/netcoreapp2.1/14-matrix_addition.csprojAssemblyReference.cache
+/home/bre/holbertonschool-csharp/0x09-csharp-linear_algebra/14-matrix_addition/obj/Debug/netcoreapp2.1/14-matrix_addition.csproj.CoreCompileInputs.cache
+/home/bre/holbertonschool-csharp/0x09-csharp-linear_algebra/14-matrix_addition/obj/Debug/netcoreapp2.1/14-matrix_addition.AssemblyInfoInputs.cache
+/home/bre/holbertonschool-csharp/0x09-csharp-linear_algebra/14-matrix_addition/obj/Debug/netcoreapp2.1/14-matrix_addition.AssemblyInfo.cs
+/home/bre/holbertonschool-csharp/0x09-csharp-linear_algebra/14-matrix_addition/bin/Debug/netcoreapp2.1/14-matrix_addition.deps.json
+/home/bre/holbertonschool-csharp/0x09-csharp-linear_algebra/14-matrix_addition/bin/Debug/netcoreapp2.1/14-matrix_addition.runtimeconfig.json
+/home/bre/holbertonschool-csharp/0x09-csharp-linear_algebra/14-matrix_addition/bin/Debug/netcoreapp2.1/14-matrix_addition.runtimeconfig.dev.json
+/home/bre/holbertonschool-csharp/0x09-csharp-linear_algebra/14-matrix_addition/bin/Debug/netcoreapp2.1/14-matrix_addition.dll
+/home/bre/holbertonschool-csharp/0x09-csharp-linear_algebra/14-matrix_addition/bin/Debug/netcoreapp2.1/14-matrix_addition.pdb
+/home/bre/holbertonschool-csharp/0x09-csharp-linear_algebra/14-matrix_addition/bin/Debug/netcoreapp2.1/14-matrix_addition.xml
+/home/bre/holbertonschool-csharp/0x09-csharp-linear_algebra/14-matrix_addition/obj/Debug/netcoreapp2.1/14-matrix_addition.dll
+/home/bre/holbertonschool-csharp/0x09-csharp-linear_algebra/14-matrix_addition/obj/Debug/netcoreapp2.1/14-matrix_addition.pdb

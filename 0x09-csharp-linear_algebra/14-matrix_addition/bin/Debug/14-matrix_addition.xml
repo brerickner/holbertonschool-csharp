@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>14-matrix_addition</name>
+    </assembly>
+    <members>
+        <member name="T:MatrixMath">
+            <summary>
+            Math for matrices
+            </summary>
+        </member>
+        <member name="M:MatrixMath.Add(System.Double[0:,0:],System.Double[0:,0:])">
+            <summary>
+            adds two matrices
+            </summary>
+            <param name="matrix1">matrix 1</param>
+            <param name="matrix2">matrix 2</param>
+            <returns>resulting matrix</returns>
+        </member>
+    </members>
+</doc>
