@@ -1,0 +1,4 @@
+/home/bre/holbertonschool-csharp/0x09-csharp-linear_algebra/12-dot_product/obj/Debug/netcoreapp2.1/12-dot_product.csprojAssemblyReference.cache
+/home/bre/holbertonschool-csharp/0x09-csharp-linear_algebra/12-dot_product/obj/Debug/netcoreapp2.1/12-dot_product.csproj.CoreCompileInputs.cache
+/home/bre/holbertonschool-csharp/0x09-csharp-linear_algebra/12-dot_product/obj/Debug/netcoreapp2.1/12-dot_product.AssemblyInfoInputs.cache
+/home/bre/holbertonschool-csharp/0x09-csharp-linear_algebra/12-dot_product/obj/Debug/netcoreapp2.1/12-dot_product.AssemblyInfo.cs
