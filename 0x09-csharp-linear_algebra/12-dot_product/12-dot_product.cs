@@ -12,7 +12,7 @@ class VectorMath
     /// <returns>dot product</returns>
     public static double DotProduct(double[] vector1, double[] vector2)
         {
-            double[] nope = {-1};
+            double nope = {-1};
             double result2 = {0};
             double result3 = {0}; 
 
