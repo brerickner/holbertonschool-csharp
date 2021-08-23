@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>12-dot_product</name>
+    </assembly>
+    <members>
+        <member name="T:VectorMath">
+            <summary>
+            Vector math
+            </summary>
+        </member>
+        <member name="M:VectorMath.DotProduct(System.Double[],System.Double[])">
+            <summary>
+            calculates dot product of either two 2D or two 3D vectors.
+            </summary>
+            <param name="vector1">vector 1</param>
+            <param name="vector2"> vector 2</param>
+            <returns>dot product</returns>
+        </member>
+    </members>
+</doc>
