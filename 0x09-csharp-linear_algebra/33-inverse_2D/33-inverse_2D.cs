@@ -11,6 +11,7 @@ class MatrixMath
     /// <returns>inversed matrix of -1 if not inversible or not 2d</returns>
     public static double[,] Inverse2D(double[,] matrix)
     {
-        Console.WriteLine("Hello World!");
+        if (matrix.GetLength(0) != 2 || matrix.GetLength(1) != 2)
+            return(-1);
     }
 }
