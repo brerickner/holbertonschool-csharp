@@ -1,17 +1,12 @@
 using System;
+using System.Windows;
 
 class Program
 {
     static void Main(string[] args)
     {
-        double[] vector1 = { 7, -3, -9 };
-        double[] result;
+        double[] vector = { 3, -7 };
 
-        result = VectorMath.Magnitude(vector);
-
-        // Console.WriteLine("(" + result[0] + ", " + result[1] + ")");
-        Console.WriteLine("should be: 11.79");
-        Console.WriteLine(t);
-        // Console.WriteLine("(" + result[0] + ")");
+        Console.WriteLine(VectorMath.Magnitude(vector));
     }
 }
