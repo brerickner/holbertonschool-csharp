@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>16-matrix_scalar_mul</name>
+    </assembly>
+    <members>
+        <member name="T:MatrixMath">
+            <summary>
+            Math for matrices
+            </summary>
+        </member>
+        <member name="M:MatrixMath.MultiplyScalar(System.Double[0:,0:],System.Double)">
+            <summary>
+            Multiplies matrix by scalar
+            </summary>
+            <param name="matrix">matrix</param>
+            <param name="scalar">scalar</param>
+            <returns>resulting matrix</returns>
+        </member>
+    </members>
+</doc>
