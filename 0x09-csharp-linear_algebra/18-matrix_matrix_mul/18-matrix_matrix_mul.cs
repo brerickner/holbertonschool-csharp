@@ -19,9 +19,9 @@ class MatrixMath
 
         if (matrix1.GetLength(1) == matrix2.GetLength(0))
         {
-            for (int i = 0; i < matrix1.GetLength(0) - 1; i++)
+            for (int i = 0; i < matrix1.GetLength(0); i++)
             {
-                for (int j = 0; j < matrix2.GetLength(1) - 1; j++)
+                for (int j = 0; j < matrix2.GetLength(1); j++)
                 {
                     int flag = 0;
                     hold = 0;
@@ -30,7 +30,6 @@ class MatrixMath
                     {
                         hold += (matrix1[i, flag] * matrix2[flag, j]);
                         flag++;
-                        
                     }
                     result[i, j] = hold;
                 }
