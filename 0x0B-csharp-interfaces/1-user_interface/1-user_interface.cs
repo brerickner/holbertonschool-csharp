@@ -72,7 +72,7 @@ public class TestObject : Base, IInteractive, IBreakable, ICollectable
     /// <summary>
     /// Public property name of type string
     /// </summary>
-    public string name;
+    public string name { get; set; }
 
     /// <summary>
     /// Override method ToString that returns string for name's type 'name is a type'
