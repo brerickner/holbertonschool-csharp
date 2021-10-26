@@ -70,6 +70,16 @@ public interface ICollectable
 public class TestObject : Base, IInteractive, IBreakable, ICollectable
 {
     /// <summary>
+    /// Property durability of type int
+    /// </summary>
+    public int durability { get; set; }
+
+    ///<summary>
+    /// Property isCollected of type bool
+    ///</summary>
+    public bool isCollected { get; set; }
+
+    /// <summary>
     /// Public property name of type string
     /// </summary>
     public string name { get; set; }
@@ -82,16 +92,6 @@ public class TestObject : Base, IInteractive, IBreakable, ICollectable
     {
         return name + " is a " + this.GetType().Name;
     }
-
-    ///<summary>
-    /// Property isCollected of type bool
-    ///</summary>
-    public bool isCollected { get; set; }
-
-    /// <summary>
-    /// Property durability of type int
-    /// </summary>
-    public int durability { get; set; }
 
     /// <summary>
     /// Method Interact of type void
