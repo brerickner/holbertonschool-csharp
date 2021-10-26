@@ -8,7 +8,7 @@ public abstract class Base
     /// <summary>
     /// Public property name of type string
     /// </summary>
-    string name { get; set; }
+    public string name { get; set; }
     
     /// <summary>
     /// Override method ToString that returns string for name's type 'name is a type'
@@ -16,7 +16,7 @@ public abstract class Base
     /// <returns>string</returns>
     public override string ToString()
     {
-        return name + " is a " + this.GetType().Name;
+        return name + " is a " + this.GetType();
     }
 }
 
@@ -69,11 +69,6 @@ public interface ICollectable
 public class Door : Base, IInteractive
 {
     /// <summary>
-    /// Public property name of type string
-    /// </summary>
-    public string name { get; set; }
-
-    /// <summary>
     /// Constructor sets value of 'name' if provided, else defaults to value of 'Door'
     /// </summary>
     public Door(string name = "Door")
@@ -95,11 +90,6 @@ public class Door : Base, IInteractive
 /// </summary>
 public class Decoration : Base, IInteractive, IBreakable
 {
-    /// <summary>
-    /// Public property name of type string
-    /// </summary>
-    public string name { get; set; }
-
     /// <summary>
     /// Property durability of type int
     /// </summary>
@@ -132,7 +122,7 @@ public class Decoration : Base, IInteractive, IBreakable
     /// Method Interact.
     /// If durability is 0 or less print 'The name has been broken.' 
     /// Else if isQuestItem is true, print 'You look at the name. There's a key inside.'
-    /// Else isQuestItem is false, print 'You look at the 'name'. Not much to see here.'
+    /// Else ifisQuestItem is false, print 'You look at the 'name'. Not much to see here.'
     /// </summary>
     public void Interact()
     {
@@ -140,11 +130,11 @@ public class Decoration : Base, IInteractive, IBreakable
         {
             Console.WriteLine("The " + this.name + " has been broken.");
         }
-        if (isQuestItem == true)
+        else if (isQuestItem == true)
         {
             Console.WriteLine("You look at the " + this.name + ". There's a key inside.");
         }
-        if (isQuestItem == false)
+        else if (isQuestItem == false)
         {
             Console.WriteLine("You look at the " + this.name + ". Not much to see here.");
         }
