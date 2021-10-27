@@ -1,6 +1,25 @@
 ﻿using System;
 
 /// <summary>
+/// Enum {Modifier} with values {Weak} {Base} {Strong}.
+/// </summary>
+public enum Modifier
+{
+    /// <summary>Modifier value Weak.</summary>
+    Weak,
+    /// <summary>Modifier value Base.</summary>
+    Base,
+    /// <summary>Modifier value Strong.</summary>
+    Strong
+}
+
+/// <summary>Delegate {CalculateModifier} takes float {baseValue} and Modifier {modifier}.</summary>
+public delegate float CalculateModifier(float baseValue, Modifier modifier);
+
+/// <summary>Delegate {CalculateHealth} takes float{amount}</summary>
+public delegate void CalculateHealth(float amount);
+
+/// <summary>
 /// Public class {CurrentHPArgs} inherits from EventArgs.
 /// </summary>
 public class CurrentHPArgs : EventArgs
@@ -20,25 +39,6 @@ public class CurrentHPArgs : EventArgs
         this.currentHP = newHp;
     }
 }
-
-/// <summary>
-/// Enum {Modifier} with values {Weak} {Base} {Strong}.
-/// </summary>
-public enum Modifier
-{
-    /// <summary>Modifier value Weak.</summary>
-    Weak,
-    /// <summary>Modifier value Base.</summary>
-    Base,
-    /// <summary>Modifier value Strong.</summary>
-    Strong
-}
-
-/// <summary>Delegate {CalculateModifier} takes float {baseValue} and Modifier {modifier}.</summary>
-public delegate float CalculateModifier(float baseValue, Modifier modifier);
-
-/// <summary>Delegate {CalculateHealth} takes float{amount}</summary>
-public delegate void CalculateHealth(float amount);
 
 /// <summary>Public class {Player}</summary>
 public class Player
@@ -78,7 +78,6 @@ public class Player
         }
         else
         {
-            
             this.maxHp = maxHp;
         }
         this.hp = maxHp;
@@ -110,8 +109,8 @@ public class Player
         else
         {
             Console.WriteLine("{0} takes {1} damage!", this.name, damage);
-            ValidateHP(this.hp -= damage);
         }
+        ValidateHP(this.hp - damage);
     }
 
     /// <summary>
@@ -129,8 +128,8 @@ public class Player
         else
         {
             Console.WriteLine("{0} heals {1} HP!", this.name, heal);
-            ValidateHP(this.hp += heal);
         }
+        ValidateHP(this.hp + heal);
     }
 
     /// <summary>
@@ -150,7 +149,7 @@ public class Player
             newHp = maxHp;
         }
         this.hp = newHp;
-        this.HPCheck(this, new CurrentHPArgs(this.hp));
+        OnCheckStatus(new CurrentHPArgs(this.hp));
     }
 
     /// <summary>
@@ -204,9 +203,49 @@ public class Player
         {
             System.Console.WriteLine(this.name + " isn't doing to great..."); 
         }
+        else if (e.currentHP >= 0 && e.currentHP < this.maxHp * 0.5f)
+        {
+            System.Console.WriteLine(this.name + "needs help!"); 
+        }
         else
         {
             System.Console.WriteLine(this.name + " is knocked out!");
         }
+    }
+
+    /// <summary>
+    /// Private method {HPValueWarning} with parameters of type object {sender}
+    /// and type {CurrentHPArgs}{e}.
+    /// If the value of {e.currentHP} is 0 print warning 'Health has reache zero!'
+    /// Otherwise print warning 'Health is low!'
+    /// Chang color of console font to red when warnings are printed.
+    /// </summary>
+    private void HPValueWarning(object sender, CurrentHPArgs e)
+    {
+        if (e.currentHP == 0)
+        {
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.WriteLine("Health has reached zero!");
+            Console.ResetColor();
+        }
+        else
+        {
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.WriteLine("Health is low!");
+            Console.ResetColor();
+        }
+    }
+
+    /// <summary>
+    /// Method {OnCheckStatus} with parameters of type {CurrentHPArgs}{e} and returns nothing.
+    /// If {e.currentHP} is less than 0.25 of {maxHp} assign {HPValueWarning} to {HPCheck}
+    /// </summary>
+    private void OnCheckStatus(CurrentHPArgs e)
+    {
+        if (e.currentHP < this.maxHp * 0.25f)
+        {
+            this.HPCheck = HPValueWarning;
+        }
+        this.HPCheck(this, e);
     }
 }
