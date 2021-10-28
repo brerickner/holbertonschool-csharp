@@ -23,17 +23,22 @@ public class Player
     /// <param name="maxHp">float maxHp = 100f(default)</param>
     public Player(string name = "Player", float maxHp = 100f)
     {
-        if (maxHp <= 0)
+        this.name = name;
+        // System.Console.WriteLine("B4---> maxHp set to {0}", this.maxHp);
+        // System.Console.WriteLine("B4---> hp set to {0}", this.hp);
+        if (maxHp < 1)
         {
             Console.WriteLine("maxHp must be greater than 0. maxHp set to 100f by default.");
-            this.maxHp = 100f;
+            maxHp = 100f;
+            // System.Console.WriteLine("in if! ---> maxHp set to {0}", this.maxHp);
+            // System.Console.WriteLine("in if! ---> hp set to {0}", this.hp);
         }
-        else
-        {
-            this.name = name;
-            this.maxHp = maxHp;
-        }
+            
+        this.maxHp = maxHp;
         this.hp = maxHp;
+        // System.Console.WriteLine("end! ---> maxHp set to {0}", this.maxHp);
+        // System.Console.WriteLine("end! ---> hp set to {0}", this.hp);
+
     }
 
     /// <summary>
