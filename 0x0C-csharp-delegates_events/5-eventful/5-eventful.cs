@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 
 /// <summary>
 /// Public class {CurrentHPArgs} inherits from EventArgs.
@@ -83,6 +84,7 @@ public class Player
         this.hp = maxHp;
         this.status = this.name + " is ready to go!";
         this.HPCheck = this.CheckStatus;
+  
     }
 
     /// <summary>
@@ -207,6 +209,11 @@ private void CheckStatus(object sender, CurrentHPArgs e)
         else if (e.currentHp > 0 && e.currentHp < this.maxHp * 0.5f)
         {
             System.Console.WriteLine(this.name + " needs help!"); 
+        }
+        else if (e.currentHp == 0)
+        {
+            System.Console.WriteLine(this.name + " is knocked out!");
+            System.Console.WriteLine("Health has reached zero!");
         }
         else
         {
