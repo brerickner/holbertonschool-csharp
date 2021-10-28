@@ -105,11 +105,13 @@ public class Player
     {
         if (damage < 0)
         {
+            damage = 0;
             Console.WriteLine("{0} takes 0 damage!", this.name);
         }
         else
         {
             Console.WriteLine("{0} takes {1} damage!", this.name, damage);
+             Console.WriteLine("{0} is knocked out!", this.name);
             ValidateHP(this.hp -= damage);
         }
     }
@@ -150,7 +152,7 @@ public class Player
             newHp = this.maxHp;
         }
         this.hp = newHp;
-        this.HPCheck(this, new CurrentHPArgs(this.hp));
+        OnCheckStatus(new CurrentHPArgs(this.hp));
     }
 
     /// <summary>
