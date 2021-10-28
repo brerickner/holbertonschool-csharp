@@ -1,6 +1,27 @@
 ﻿using System;
 
 /// <summary>
+/// Public class {CurrentHPArgs} inherits from EventArgs.
+/// </summary>
+public class CurrentHPArgs : EventArgs
+{
+    /// <summary>
+    /// Public property type float {currentHp} cannot be modified.
+    /// </summary>
+    public readonly float currentHp;
+
+    /// <summary>
+    /// Constructor
+    /// Takes type float {newHp} and sets it as {currentHp}
+    /// </summary>
+    /// <param name="newHp">float newHp</param>
+    public CurrentHPArgs(float newHp)
+    {
+        this.currentHp = newHp;
+    }
+}
+
+/// <summary>
 /// Enum {Modifier} with values {Weak} {Base} {Strong}.
 /// </summary>
 public enum Modifier
@@ -12,45 +33,25 @@ public enum Modifier
     /// <summary>Modifier value Strong.</summary>
     Strong
 }
-
 /// <summary>Delegate {CalculateModifier} takes float {baseValue} and Modifier {modifier}.</summary>
 public delegate float CalculateModifier(float baseValue, Modifier modifier);
 
 /// <summary>Delegate {CalculateHealth} takes float{amount}</summary>
 public delegate void CalculateHealth(float amount);
 
-/// <summary>
-/// Public class {CurrentHPArgs} inherits from EventArgs.
-/// </summary>
-public class CurrentHPArgs : EventArgs
-{
-    /// <summary>
-    /// Public property type float {currentHP} cannot be modified.
-    /// </summary>
-    public float currentHP { get; private set; }
-
-    /// <summary>
-    /// Constructor
-    /// Takes type float {newHp} and sets it as {currentHp}
-    /// </summary>
-    /// <param name="newHp">float newHp</param>
-    public CurrentHPArgs(float newHp)
-    {
-        this.currentHP = newHp;
-    }
-}
 
 /// <summary>Public class {Player}</summary>
 public class Player
 {
     /// <summary>Public property type string {name}</summary>
     private string name;
-    
+
     /// <summary>Public eventHandler of type {CurrentHPArgs}{HPCheck}</summary>
     public EventHandler<CurrentHPArgs> HPCheck;
 
     /// <summary>Private proerty type string {status} default '{name} is ready to go!'</summary>
     private string status;
+
 
     /// <summary>Public property type float {maxHp}</summary>
     private float maxHp;
@@ -69,8 +70,6 @@ public class Player
     /// <param name="maxHp">float maxHp = 100f(default)</param>
     public Player(string name = "Player", float maxHp = 100f)
     {
-        this.name = name;
-        
         if (maxHp <= 0)
         {
             Console.WriteLine("maxHp must be greater than 0. maxHp set to 100f by default.");
@@ -78,6 +77,7 @@ public class Player
         }
         else
         {
+            this.name = name;
             this.maxHp = maxHp;
         }
         this.hp = maxHp;
@@ -94,8 +94,9 @@ public class Player
         Console.WriteLine("{0} has {1} / {2} health", this.name, this.hp, this.maxHp);
     }
 
-    /// <summary>
-    /// Public method {TakeDamage} type void takes float{damage}.
+
+
+    /// <summary>Public method {TakeDamage} type void takes float{damage}.
     /// Prints '{name} takes {damage} damage!'.
     /// If {damage} negative, {Player} takes 0 damage and prints '{name} takes 0 damage!'
     /// </summary>
@@ -109,8 +110,8 @@ public class Player
         else
         {
             Console.WriteLine("{0} takes {1} damage!", this.name, damage);
+            ValidateHP(this.hp -= damage);
         }
-        ValidateHP(this.hp - damage);
     }
 
     /// <summary>
@@ -128,11 +129,11 @@ public class Player
         else
         {
             Console.WriteLine("{0} heals {1} HP!", this.name, heal);
+            ValidateHP(this.hp += heal);
         }
-        ValidateHP(this.hp + heal);
     }
 
-    /// <summary>
+   /// <summary>
     /// Public method {ValidateHP} takes float {newHp}.
     /// If {damage} taken, subtract {damage} from {hp}
     /// If health is healed, add {heal} to {hp}
@@ -144,12 +145,12 @@ public class Player
         {
             newHp = 0;
         }
-        if (newHp > maxHp)
+        if (newHp > this.maxHp)
         {
-            newHp = maxHp;
+            newHp = this.maxHp;
         }
         this.hp = newHp;
-        OnCheckStatus(new CurrentHPArgs(this.hp));
+        this.HPCheck(this, new CurrentHPArgs(this.hp));
     }
 
     /// <summary>
@@ -180,7 +181,7 @@ public class Player
     /// <summary>
     /// Private method {CheckStatus} with parameters of type object {sender} and 
     /// type {CurrentHPArgs}{e}.
-    /// Depending on {e.currentHP} value, set Player {status} and print statements regarding status.
+    /// Depending on {e.currentHp} value, set Player {status} and print statements regarding status.
     /// If {e.currentHp} is equal to {maxHp} print '{name} is in perfect health!'.
     /// If {e.currentHp} between 0.5 of {maxHp}(inclusive) and {maxHp}(exclusive)
     /// print '{name} is doing well'.
@@ -189,23 +190,23 @@ public class Player
     /// If {e.currentHp} between 0(exclusive) and 0.25(exclusive)
     /// print '{name} is knocked out!'.
     /// </summary>
-    private void CheckStatus(object sender, CurrentHPArgs e)
+private void CheckStatus(object sender, CurrentHPArgs e)
     {
-        if (e.currentHP == this.maxHp)
+        if (e.currentHp == this.maxHp)
         {
            System.Console.WriteLine(this.name + " is in perfect health!"); 
         }
-        else if (e.currentHP >= this.maxHp * 0.5f && e.currentHP < this.maxHp)
+        else if (e.currentHp >= this.maxHp * 0.5f && e.currentHp < this.maxHp)
         {
-            System.Console.WriteLine(this.name + " is doing well");
+            System.Console.WriteLine(this.name + " is doing well!");
         }
-        else if (e.currentHP >= this.maxHp * 0.25f && e.currentHP < this.maxHp * 0.5f)
+        else if (e.currentHp >= this.maxHp * 0.25f && e.currentHp < this.maxHp * 0.5f)
         {
-            System.Console.WriteLine(this.name + " isn't doing to great..."); 
+            System.Console.WriteLine(this.name + " isn't doing too great..."); 
         }
-        else if (e.currentHP >= 0 && e.currentHP < this.maxHp * 0.5f)
+        else if (e.currentHp > 0 && e.currentHp < this.maxHp * 0.5f)
         {
-            System.Console.WriteLine(this.name + "needs help!"); 
+            System.Console.WriteLine(this.name + " needs help!"); 
         }
         else
         {
@@ -213,16 +214,9 @@ public class Player
         }
     }
 
-    /// <summary>
-    /// Private method {HPValueWarning} with parameters of type object {sender}
-    /// and type {CurrentHPArgs}{e}.
-    /// If the value of {e.currentHP} is 0 print warning 'Health has reache zero!'
-    /// Otherwise print warning 'Health is low!'
-    /// Chang color of console font to red when warnings are printed.
-    /// </summary>
     private void HPValueWarning(object sender, CurrentHPArgs e)
     {
-        if (e.currentHP == 0)
+        if (e.currentHp == 0)
         {
             Console.ForegroundColor = ConsoleColor.Red;
             Console.WriteLine("Health has reached zero!");
@@ -238,11 +232,11 @@ public class Player
 
     /// <summary>
     /// Method {OnCheckStatus} with parameters of type {CurrentHPArgs}{e} and returns nothing.
-    /// If {e.currentHP} is less than 0.25 of {maxHp} assign {HPValueWarning} to {HPCheck}
+    /// If {e.currentHp} is less than 0.25 of {maxHp} assign {HPValueWarning} to {HPCheck}
     /// </summary>
     private void OnCheckStatus(CurrentHPArgs e)
     {
-        if (e.currentHP < this.maxHp * 0.25f)
+        if (e.currentHp < this.maxHp * 0.25f)
         {
             this.HPCheck = HPValueWarning;
         }
