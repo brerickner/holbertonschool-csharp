@@ -33,24 +33,25 @@ public enum Modifier
     /// <summary>Modifier value Strong.</summary>
     Strong
 }
-
 /// <summary>Delegate {CalculateModifier} takes float {baseValue} and Modifier {modifier}.</summary>
 public delegate float CalculateModifier(float baseValue, Modifier modifier);
 
 /// <summary>Delegate {CalculateHealth} takes float{amount}</summary>
 public delegate void CalculateHealth(float amount);
 
+
 /// <summary>Public class {Player}</summary>
 public class Player
 {
     /// <summary>Public property type string {name}</summary>
     private string name;
-    
+
     /// <summary>Public eventHandler of type {CurrentHPArgs}{HPCheck}</summary>
     public EventHandler<CurrentHPArgs> HPCheck;
 
     /// <summary>Private proerty type string {status} default '{name} is ready to go!'</summary>
     private string status;
+
 
     /// <summary>Public property type float {maxHp}</summary>
     private float maxHp;
@@ -69,8 +70,6 @@ public class Player
     /// <param name="maxHp">float maxHp = 100f(default)</param>
     public Player(string name = "Player", float maxHp = 100f)
     {
-        this.name = name;
-        
         if (maxHp <= 0)
         {
             Console.WriteLine("maxHp must be greater than 0. maxHp set to 100f by default.");
@@ -78,7 +77,7 @@ public class Player
         }
         else
         {
-            
+            this.name = name;
             this.maxHp = maxHp;
         }
         this.hp = maxHp;
@@ -95,8 +94,9 @@ public class Player
         Console.WriteLine("{0} has {1} / {2} health", this.name, this.hp, this.maxHp);
     }
 
-    /// <summary>
-    /// Public method {TakeDamage} type void takes float{damage}.
+
+
+    /// <summary>Public method {TakeDamage} type void takes float{damage}.
     /// Prints '{name} takes {damage} damage!'.
     /// If {damage} negative, {Player} takes 0 damage and prints '{name} takes 0 damage!'
     /// </summary>
@@ -133,7 +133,7 @@ public class Player
         }
     }
 
-    /// <summary>
+   /// <summary>
     /// Public method {ValidateHP} takes float {newHp}.
     /// If {damage} taken, subtract {damage} from {hp}
     /// If health is healed, add {heal} to {hp}
@@ -145,9 +145,9 @@ public class Player
         {
             newHp = 0;
         }
-        if (newHp > maxHp)
+        if (newHp > this.maxHp)
         {
-            newHp = maxHp;
+            newHp = this.maxHp;
         }
         this.hp = newHp;
         this.HPCheck(this, new CurrentHPArgs(this.hp));
