@@ -6,9 +6,9 @@
 public class CurrentHPArgs : EventArgs
 {
     /// <summary>
-    /// Public property type float {currentHP} cannot be modified.
+    /// Public property type float {currentHp} cannot be modified.
     /// </summary>
-    public float currentHP { get; private set; }
+    public readonly float currentHp;
 
     /// <summary>
     /// Constructor
@@ -17,7 +17,7 @@ public class CurrentHPArgs : EventArgs
     /// <param name="newHp">float newHp</param>
     public CurrentHPArgs(float newHp)
     {
-        this.currentHP = newHp;
+        this.currentHp = newHp;
     }
 }
 
@@ -181,7 +181,7 @@ public class Player
     /// <summary>
     /// Private method {CheckStatus} with parameters of type object {sender} and 
     /// type {CurrentHPArgs}{e}.
-    /// Depending on {e.currentHP} value, set Player {status} and print statements regarding status.
+    /// Depending on {e.currentHp} value, set Player {status} and print statements regarding status.
     /// If {e.currentHp} is equal to {maxHp} print '{name} is in perfect health!'.
     /// If {e.currentHp} between 0.5 of {maxHp}(inclusive) and {maxHp}(exclusive)
     /// print '{name} is doing well'.
@@ -192,19 +192,19 @@ public class Player
     /// </summary>
 private void CheckStatus(object sender, CurrentHPArgs e)
     {
-        if (e.currentHP == this.maxHp)
+        if (e.currentHp == this.maxHp)
         {
            System.Console.WriteLine(this.name + " is in perfect health!"); 
         }
-        else if (e.currentHP >= this.maxHp * 0.5f && e.currentHP < this.maxHp)
+        else if (e.currentHp >= this.maxHp * 0.5f && e.currentHp < this.maxHp)
         {
             System.Console.WriteLine(this.name + " is doing well!");
         }
-        else if (e.currentHP >= this.maxHp * 0.25f && e.currentHP < this.maxHp * 0.5f)
+        else if (e.currentHp >= this.maxHp * 0.25f && e.currentHp < this.maxHp * 0.5f)
         {
             System.Console.WriteLine(this.name + " isn't doing too great..."); 
         }
-        else if (e.currentHP > 0 && e.currentHP < this.maxHp * 0.5f)
+        else if (e.currentHp > 0 && e.currentHp < this.maxHp * 0.5f)
         {
             System.Console.WriteLine(this.name + " needs help!"); 
         }
