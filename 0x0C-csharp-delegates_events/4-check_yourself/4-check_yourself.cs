@@ -190,7 +190,7 @@ public class Player
     /// If {e.currentHp} between 0(exclusive) and 0.25(exclusive)
     /// print '{name} is knocked out!'.
     /// </summary>
-    private void CheckStatus(object sender, CurrentHPArgs e)
+private void CheckStatus(object sender, CurrentHPArgs e)
     {
         if (e.currentHP == this.maxHp)
         {
@@ -198,11 +198,15 @@ public class Player
         }
         else if (e.currentHP >= this.maxHp * 0.5f && e.currentHP < this.maxHp)
         {
-            System.Console.WriteLine(this.name + " is doing well!");
+            System.Console.WriteLine(this.name + " is doing well");
         }
         else if (e.currentHP >= this.maxHp * 0.25f && e.currentHP < this.maxHp * 0.5f)
         {
-            System.Console.WriteLine(this.name + " isn't doing too great..."); 
+            System.Console.WriteLine(this.name + " isn't doing to great..."); 
+        }
+        else if (e.currentHP >= 0 && e.currentHP < this.maxHp * 0.5f)
+        {
+            System.Console.WriteLine(this.name + "needs help!"); 
         }
         else
         {
