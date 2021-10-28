@@ -198,7 +198,7 @@ public class Player
         }
         else if (e.currentHP >= this.maxHp * 0.5f && e.currentHP < this.maxHp)
         {
-            System.Console.WriteLine(this.name + " is doing well");
+            System.Console.WriteLine(this.name + " is doing well!");
         }
         else if (e.currentHP >= this.maxHp * 0.25f && e.currentHP < this.maxHp * 0.5f)
         {
