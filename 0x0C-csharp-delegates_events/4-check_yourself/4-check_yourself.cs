@@ -206,7 +206,7 @@ private void CheckStatus(object sender, CurrentHPArgs e)
         }
         else if (e.currentHP >= 0 && e.currentHP < this.maxHp * 0.5f)
         {
-            System.Console.WriteLine(this.name + "needs help!"); 
+            System.Console.WriteLine(this.name + " needs help!"); 
         }
         else
         {
