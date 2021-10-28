@@ -85,7 +85,7 @@ public class Player
         }
     }
 
-    /// <summary>
+   /// <summary>
     /// Public method {ValidateHP} takes float {newHp}.
     /// If {damage} taken, subtract {damage} from {hp}
     /// If health is healed, add {heal} to {hp}
@@ -95,12 +95,12 @@ public class Player
     {
         if (newHp < 0)
         {
-            this.hp = 0;
+            newHp = 0;
         }
-        else
+        if (newHp > this.maxHp)
         {
-            this.hp = newHp;
+            newHp = this.maxHp;
         }
+        this.hp = newHp;
     }
-
 }
