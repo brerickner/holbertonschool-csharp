@@ -1,0 +1,59 @@
+{
+  "format": 1,
+  "restore": {
+    "/home/bre/holbertonschool-csharp/0x0D-csharp-text_based_interface/InventoryLibrary.Tests/InventoryLibrary.Tests.csproj": {}
+  },
+  "projects": {
+    "/home/bre/holbertonschool-csharp/0x0D-csharp-text_based_interface/InventoryLibrary.Tests/InventoryLibrary.Tests.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/bre/holbertonschool-csharp/0x0D-csharp-text_based_interface/InventoryLibrary.Tests/InventoryLibrary.Tests.csproj",
+        "projectName": "InventoryLibrary.Tests",
+        "projectPath": "/home/bre/holbertonschool-csharp/0x0D-csharp-text_based_interface/InventoryLibrary.Tests/InventoryLibrary.Tests.csproj",
+        "packagesPath": "/home/bre/.nuget/packages/",
+        "outputPath": "/home/bre/holbertonschool-csharp/0x0D-csharp-text_based_interface/InventoryLibrary.Tests/obj/",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "/usr/share/dotnet/sdk/NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "/home/bre/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net50"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net50": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net50": {
+          "dependencies": {
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[16.5.0, )"
+            },
+            "NUnit": {
+              "target": "Package",
+              "version": "[3.12.0, )"
+            },
+            "NUnit3TestAdapter": {
+              "target": "Package",
+              "version": "[3.16.1, )"
+            }
+          }
+        }
+      }
+    }
+  }
+}
