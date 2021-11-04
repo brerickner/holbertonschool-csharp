@@ -29,6 +29,38 @@
             Method {BaseClass} to set the properties for BaseClass.
             </summary>
         </member>
+        <member name="T:InventoryLibrary.Inventory">
+            <summary>
+            Public class {Inventory} inherits from BaseClass.
+            Defines:
+               - Public property {user_id} from {User} id. Required.
+               - Public property {item_id} from {Item} id. Required.
+               - Public property [quantity}. Required.
+            </summary>
+        </member>
+        <member name="P:InventoryLibrary.Inventory.user_id">
+            <summary>
+            Public property {user_id} from {User} id. Required.
+            </summary>
+        </member>
+        <member name="P:InventoryLibrary.Inventory.item_id">
+            <summary>
+            Public property {item_id} from {Item} id. Required.
+            </summary>
+        </member>
+        <member name="P:InventoryLibrary.Inventory.quantity">
+            <summary>
+            Public property {quantity}. Required.
+            </summary>
+        </member>
+        <member name="M:InventoryLibrary.Inventory.#ctor(System.String,System.String,System.Int32)">
+            <summary>
+            Public constructor {Inventory} with all Inventory properties as parameters.
+            </summary>
+            <param name="user_id">Type string. {User} id. Required.</param>
+            <param name="item_id">Type string. {Item} id. Required.</param>
+            <param name="quantity">Type int. Defaults to 1. Cannot be less than zero. Required.</param>
+        </member>
         <member name="T:InventoryLibrary.Item">
             <summary>
             Public class {Item} inherits from BaseClass..
@@ -65,7 +97,6 @@
             Public class {User} inherits from BaseClass..
             Defines:
                - Public propert {name} string. Required.
-             
             </summary>
         </member>
         <member name="P:InventoryLibrary.User.name">

@@ -82,5 +82,32 @@ namespace InventoryLibrary.Tests
            
 
         }
+
+        /// <summary>
+        /// Method {Test_Inventory_Properties} tests Inventory properties user_id, item_id, quantity and correctness of type
+        /// </summary>
+        [Test]
+        public void Test_Inventory_Properties()
+        {
+            User meow = new User("Cat");
+            User meow1 = new User("Cat_1");
+            Item meow_item = new Item("toy");
+            Item meow1_item = new Item("food");
+            Inventory meow_inventory = new Inventory(meow.id, meow_item.id, 1);
+            Inventory meow1_inventory = new Inventory(meow1.id, meow1_item.id, 2);
+            Assert.AreEqual(meow_inventory.user_id, meow.id);
+            Assert.AreEqual(meow1_inventory.user_id, meow1.id);
+            Assert.AreEqual(meow_inventory.item_id, meow_item.id);
+            Assert.AreEqual(meow1_inventory.item_id, meow1_item.id);
+            Assert.AreEqual(meow_inventory.quantity, 1);
+            Assert.AreEqual(meow1_inventory.quantity, 2);
+            Assert.AreEqual(meow_inventory.user_id.GetType(), typeof(string));
+            Assert.AreEqual(meow1_inventory.user_id.GetType(), typeof(string));
+            Assert.AreEqual(meow_inventory.item_id.GetType(), typeof(string));
+            Assert.AreEqual(meow1_inventory.item_id.GetType(), typeof(string));
+            Assert.AreEqual(meow_inventory.quantity.GetType(), typeof(int));
+            Assert.AreEqual(meow1_inventory.quantity.GetType(), typeof(int));
+        }
+
     }
 }
