@@ -60,5 +60,22 @@
             <param name="price">float defaults to 0.0f</param>
             <param name="tags">List of strings defaults to null</param>
         </member>
+        <member name="T:InventoryLibrary.User">
+            <summary>
+            Public class {User} inherits from BaseClass..
+            Defines:
+               - Public propert {name} string. Required.
+             
+            </summary>
+        </member>
+        <member name="P:InventoryLibrary.User.name">
+            <summary> Public {name} string. Required. </summary>
+        </member>
+        <member name="M:InventoryLibrary.User.#ctor(System.String)">
+            <summary>
+            Constructor {User} with all User properties as parameters.
+            </summary>
+            <param name="name">string required</param>
+        </member>
     </members>
 </doc>

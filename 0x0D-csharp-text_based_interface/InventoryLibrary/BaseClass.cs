@@ -4,10 +4,6 @@ using System.Linq;
 using System.Text;
 using System.Globalization;
 
-
-/// <summary>
-/// Name space {InventoryLibrary}.
-/// </summary>
 namespace InventoryLibrary
 {
     /// <summary>
@@ -33,6 +29,7 @@ namespace InventoryLibrary
         /// <summary>
         /// Method {BaseClass} to set the properties for BaseClass.
         /// </summary>
+
         public BaseClass()
         {
             Guid guid = Guid.NewGuid();

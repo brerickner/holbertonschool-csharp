@@ -66,5 +66,21 @@ namespace InventoryLibrary.Tests
             Assert.AreEqual(meow3.price.GetType(), typeof(float));
             Assert.AreEqual(meow3.tags.GetType(), typeof(List<string>));
         }
+
+        /// <summary>
+        /// Method {Test_User_Properties} tests User property name and correctness of type
+        /// </summary>
+        [Test]
+        public void Test_User_Properties()
+        {
+            User meow = new User("Cat");
+            User meow1 = new User("Cat_1");
+            Assert.AreNotEqual(meow.name, meow1.name);
+            Assert.AreEqual(meow.name, "Cat");
+            Assert.AreEqual(meow1.name, "Cat_1");
+            Assert.AreEqual(meow.name.GetType(), typeof(string));
+           
+
+        }
     }
 }

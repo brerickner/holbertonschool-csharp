@@ -29,5 +29,53 @@
             Method {BaseClass} to set the properties for BaseClass.
             </summary>
         </member>
+        <member name="T:InventoryLibrary.Item">
+            <summary>
+            Public class {Item} inherits from BaseClass..
+            Defines:
+               - Public {name} string. Required.
+               - Public {description} string. Optional.
+               - Public {price} float, limit 2 decimals. Optional.
+               - Public {tags} list of strings. Optional.
+            </summary>
+        </member>
+        <member name="P:InventoryLibrary.Item.name">
+            <summary> Public {name} string. Required. </summary>
+        </member>
+        <member name="P:InventoryLibrary.Item.description">
+            <summary>Public {description} string. Optional.</summary>
+        </member>
+        <member name="P:InventoryLibrary.Item.price">
+            <summary>Public {price} float, limit 2 decimals. Optional.</summary>
+        </member>
+        <member name="P:InventoryLibrary.Item.tags">
+            <summary>Public {tags} list of strings. Optional.</summary>
+        </member>
+        <member name="M:InventoryLibrary.Item.#ctor(System.String,System.String,System.Single,System.Collections.Generic.List{System.String})">
+            <summary>
+            Constructor {Item} with all Item properties as parameters.
+            </summary>
+            <param name="name">string required</param>
+            <param name="description">string defaults to null</param>
+            <param name="price">float defaults to 0.0f</param>
+            <param name="tags">List of strings defaults to null</param>
+        </member>
+        <member name="T:InventoryLibrary.User">
+            <summary>
+            Public class {User} inherits from BaseClass..
+            Defines:
+               - Public propert {name} string. Required.
+             
+            </summary>
+        </member>
+        <member name="P:InventoryLibrary.User.name">
+            <summary> Public {name} string. Required. </summary>
+        </member>
+        <member name="M:InventoryLibrary.User.#ctor(System.String)">
+            <summary>
+            Constructor {User} with all User properties as parameters.
+            </summary>
+            <param name="name">string required</param>
+        </member>
     </members>
 </doc>
