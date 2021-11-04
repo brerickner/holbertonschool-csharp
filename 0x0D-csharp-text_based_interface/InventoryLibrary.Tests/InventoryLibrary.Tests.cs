@@ -22,8 +22,8 @@ namespace InventoryLibrary.Tests
         [SetUp]
         public void Setup()
         {
-            BaseClass meow = new BaseClass();
-            BaseClass meow1 = new BaseClass();
+            // BaseClass meow = new BaseClass();
+            // BaseClass meow1 = new BaseClass();
    
         }
 
@@ -43,6 +43,28 @@ namespace InventoryLibrary.Tests
             Assert.AreEqual(meow.id.GetType(), typeof(string));
             Assert.AreEqual(meow.date_created.GetType(), typeof(DateTime));
             Assert.AreEqual(meow.date_updated.GetType(), typeof(DateTime));
+        }
+
+        /// <summary>
+        /// Method Test_Item_Properties.
+        /// Test Item properties name, description, price, and tags along with correctness of property types.
+        /// </summary>
+        [Test]
+        public void Test_Item_Properties()
+        {
+            Item meow = new Item("Cat");
+            Item meow1 = new Item("Cat_1");
+            Item meow2 = new Item("Cat_2", description: "A cat");
+            Item meow3 = new Item("Cat_3", price: 9.99f, tags: new List<string>() { "cat", "kitten" });
+            Assert.AreNotEqual(meow.name, meow1.name);
+            Assert.AreEqual("A cat", meow2.description);
+            Assert.AreEqual(0.0f, meow1.price);
+            Assert.AreEqual(null, meow1.tags);
+            Assert.AreEqual(9.99f, meow3.price);
+            Assert.AreEqual(meow.name.GetType(), typeof(string));
+            Assert.AreEqual(meow2.description.GetType(), typeof(string));
+            Assert.AreEqual(meow3.price.GetType(), typeof(float));
+            Assert.AreEqual(meow3.tags.GetType(), typeof(List<string>));
         }
     }
 }
