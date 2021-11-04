@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>InventoryLibrary</name>
+    </assembly>
+    <members>
+        <member name="T:InventoryLibrary.BaseClass">
+            <summary>
+            Public class {BaseClass} all classes will inherit from.
+            </summary>
+        </member>
+        <member name="P:InventoryLibrary.BaseClass.id">
+            <summary>
+            Property {id} of type {string}
+            </summary>
+        </member>
+        <member name="P:InventoryLibrary.BaseClass.date_created">
+            <summary>
+            Property {date_created} of type {DateTime}
+            </summary>
+        </member>
+        <member name="P:InventoryLibrary.BaseClass.date_updated">
+            <summary>
+            Property {date_updated} of type {DateTime}
+            </summary>
+        </member>
+        <member name="M:InventoryLibrary.BaseClass.#ctor">
+            <summary>
+            Method {BaseClass} to set the properties for BaseClass.
+            </summary>
+        </member>
+    </members>
+</doc>

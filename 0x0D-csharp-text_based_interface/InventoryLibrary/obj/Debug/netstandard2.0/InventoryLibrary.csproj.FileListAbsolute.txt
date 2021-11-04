@@ -1,0 +1,10 @@
+/home/bre/holbertonschool-csharp/0x0D-csharp-text_based_interface/InventoryLibrary/bin/Debug/netstandard2.0/InventoryLibrary.deps.json
+/home/bre/holbertonschool-csharp/0x0D-csharp-text_based_interface/InventoryLibrary/bin/Debug/netstandard2.0/InventoryLibrary.dll
+/home/bre/holbertonschool-csharp/0x0D-csharp-text_based_interface/InventoryLibrary/bin/Debug/netstandard2.0/InventoryLibrary.pdb
+/home/bre/holbertonschool-csharp/0x0D-csharp-text_based_interface/InventoryLibrary/bin/Debug/netstandard2.0/InventoryLibrary.xml
+/home/bre/holbertonschool-csharp/0x0D-csharp-text_based_interface/InventoryLibrary/obj/Debug/netstandard2.0/InventoryLibrary.csprojAssemblyReference.cache
+/home/bre/holbertonschool-csharp/0x0D-csharp-text_based_interface/InventoryLibrary/obj/Debug/netstandard2.0/InventoryLibrary.csproj.CoreCompileInputs.cache
+/home/bre/holbertonschool-csharp/0x0D-csharp-text_based_interface/InventoryLibrary/obj/Debug/netstandard2.0/InventoryLibrary.AssemblyInfoInputs.cache
+/home/bre/holbertonschool-csharp/0x0D-csharp-text_based_interface/InventoryLibrary/obj/Debug/netstandard2.0/InventoryLibrary.AssemblyInfo.cs
+/home/bre/holbertonschool-csharp/0x0D-csharp-text_based_interface/InventoryLibrary/obj/Debug/netstandard2.0/InventoryLibrary.dll
+/home/bre/holbertonschool-csharp/0x0D-csharp-text_based_interface/InventoryLibrary/obj/Debug/netstandard2.0/InventoryLibrary.pdb

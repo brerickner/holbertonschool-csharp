@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Globalization;
 
 
 /// <summary>
@@ -32,10 +33,7 @@ namespace InventoryLibrary
         /// <summary>
         /// Method {BaseClass} to set the properties for BaseClass.
         /// </summary>
-        /// <param name="id">{string}Globally Unique Identifier</param>
-        /// <param name="date_created">{DateTime}</param>
-        /// <param name="date_updated">{DateTime}</param>
-        public BaseClass(string id, DateTime date_created, DateTime date_updated)
+        public BaseClass()
         {
             Guid guid = Guid.NewGuid();
 
@@ -43,6 +41,5 @@ namespace InventoryLibrary
             this.date_created = date_created;
             this.date_updated = date_updated;
         }
-
     }
 }
