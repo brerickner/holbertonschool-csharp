@@ -56,10 +56,10 @@ namespace InventoryLibrary
             Dictionary<string, object> vault = this.objects;
             string path = "../storage/inventory_manager.json";
             string JSON = JsonConvert.SerializeObject(vault);
-            
+
             if (!File.Exists(path))
             {
-                File.Create(path);
+                File.Create(path).Close();
             }
             File.WriteAllText(path, JSON);
         }
