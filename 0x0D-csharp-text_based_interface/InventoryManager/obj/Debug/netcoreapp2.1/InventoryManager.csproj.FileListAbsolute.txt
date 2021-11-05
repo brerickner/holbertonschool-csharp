@@ -1,0 +1,16 @@
+/home/bre/holbertonschool-csharp/0x0D-csharp-text_based_interface/InventoryManager/obj/Debug/netcoreapp2.1/InventoryManager.csprojAssemblyReference.cache
+/home/bre/holbertonschool-csharp/0x0D-csharp-text_based_interface/InventoryManager/obj/Debug/netcoreapp2.1/InventoryManager.csproj.CoreCompileInputs.cache
+/home/bre/holbertonschool-csharp/0x0D-csharp-text_based_interface/InventoryManager/obj/Debug/netcoreapp2.1/InventoryManager.AssemblyInfoInputs.cache
+/home/bre/holbertonschool-csharp/0x0D-csharp-text_based_interface/InventoryManager/obj/Debug/netcoreapp2.1/InventoryManager.AssemblyInfo.cs
+/home/bre/holbertonschool-csharp/0x0D-csharp-text_based_interface/InventoryManager/bin/Debug/netcoreapp2.1/InventoryManager.deps.json
+/home/bre/holbertonschool-csharp/0x0D-csharp-text_based_interface/InventoryManager/bin/Debug/netcoreapp2.1/InventoryManager.runtimeconfig.json
+/home/bre/holbertonschool-csharp/0x0D-csharp-text_based_interface/InventoryManager/bin/Debug/netcoreapp2.1/InventoryManager.runtimeconfig.dev.json
+/home/bre/holbertonschool-csharp/0x0D-csharp-text_based_interface/InventoryManager/bin/Debug/netcoreapp2.1/InventoryManager.dll
+/home/bre/holbertonschool-csharp/0x0D-csharp-text_based_interface/InventoryManager/bin/Debug/netcoreapp2.1/InventoryManager.pdb
+/home/bre/holbertonschool-csharp/0x0D-csharp-text_based_interface/InventoryManager/bin/Debug/netcoreapp2.1/InventoryManager.xml
+/home/bre/holbertonschool-csharp/0x0D-csharp-text_based_interface/InventoryManager/bin/Debug/netcoreapp2.1/InventoryLibrary.dll
+/home/bre/holbertonschool-csharp/0x0D-csharp-text_based_interface/InventoryManager/bin/Debug/netcoreapp2.1/InventoryLibrary.pdb
+/home/bre/holbertonschool-csharp/0x0D-csharp-text_based_interface/InventoryManager/bin/Debug/netcoreapp2.1/InventoryLibrary.xml
+/home/bre/holbertonschool-csharp/0x0D-csharp-text_based_interface/InventoryManager/obj/Debug/netcoreapp2.1/InventoryManager.csproj.CopyComplete
+/home/bre/holbertonschool-csharp/0x0D-csharp-text_based_interface/InventoryManager/obj/Debug/netcoreapp2.1/InventoryManager.dll
+/home/bre/holbertonschool-csharp/0x0D-csharp-text_based_interface/InventoryManager/obj/Debug/netcoreapp2.1/InventoryManager.pdb
