@@ -109,5 +109,47 @@ namespace InventoryLibrary.Tests
             Assert.AreEqual(meow1_inventory.quantity.GetType(), typeof(int));
         }
 
+        /// <summary>
+        /// Method {Test_JSONStorage_Properties} tests JSONStorage property objects and correctnes of types.
+        /// </summary>
+        [Test]
+        public void Test_JSONStorage_Properties()
+        {
+            JSONStorage meow = new JSONStorage();
+            Dictionary<string, object> meow_dict = new Dictionary<string, object>();
+           
+            Assert.AreEqual(meow.objects.GetType(), typeof(Dictionary<string, object>));
+            Assert.AreEqual(meow_dict, meow.objects);
+        }
+
+        /// <summary>
+        /// Method {Test_JSONStorage_All} tests JSONStorage all method.
+        /// </summary>
+        [Test]
+        public void Test_JSONStorage_All()
+{
+            JSONStorage meow = new JSONStorage();
+            meow.All();
+            Assert.AreEqual(meow.objects.GetType(), typeof(Dictionary<string, object>));
+            Assert.AreEqual(meow.objects.Count, 0);
+        }
+
+        /// <summary>
+        /// Method {Test_JSONStorage_New} tests JSONStorage {New} method
+        ///  and object parameter for correctness of type.
+        /// </summary>
+        [Test]
+        public void Test_JSONStorage_New()
+        {
+            JSONStorage meow = new JSONStorage();
+            User meow_user = new User("Cat");
+            Item meow_item = new Item("toy");
+            Inventory meow_inventory = new Inventory(meow_user.id, meow_item.id, 1);
+            meow.New(meow_user);
+            meow.New(meow_item);
+            meow.New(meow_inventory);
+            Assert.AreEqual(meow.objects.GetType(), typeof(Dictionary<string, object>));
+            Assert.AreEqual(meow.objects.Count, 3);
+        }
     }
 }
